@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कविता-ए-कलम </title>
+    <!-- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/> -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+
+
+        }
+
+        header ::before {
+            background: url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60');
+            content: "";
+            height: 130%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.1;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        /* 
+        background-image: {
+            opacity: 0.3;
+        } */
+
+        .navbar .lii {
+            float: left;
+            list-style: none;
+            margin: 10px 14px;
+            /* position: sticky; */
+            /* background-color: black; */
+            /* padding: 8px 6px; */
+            border-radius: 10px;
+
+        }
+
+        .navbar .lii a {
+            text-decoration: none;
+            color: white;
+            padding: 3px 11px;
+        }
+
+        .navbar .lii a:hover {
+            color: rgb(110, 110, 228);
+            /* background-color: rgb(43, 43, 165); */
+            /* text-decoration: underline; */
+            /* border-radius: 30px; */
+
+        }
+
+        .navbar .lii a.active {
+            color: blueviolet;
+        }
+
+        .navbar #bruh {
+            overflow: auto;
+            border: 4px solid darkred;
+            border-radius: 18px;
+            /* background-color: black; */
+            
+        }
+
+        .navbar  {
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        .search {
+            float: right;
+            padding: 8px 50px;
+        }
+
+        .search input {
+            border-radius: 9px;
+            width: 160px;
+            height: 20px;
+
+        }
+
+        #clickable img {
+            position: relative;
+            top: 20px;
+            left: 424px;
+            opacity: 0.68;
+        }
+
+        #poem {
+            color: white;
+            height: 140px;
+            position: relative;
+            left: 455px;
+            top: 14px;
+            opacity: 0.8;
+            border: 1px solid black;
+            border-radius: 24px;
+            max-width: 100%;
+            box-shadow: 0px 0px 7px 2px rgba(139, 69, 19, 0.678);
+
+        }
+ul li ul li{
+    
+    float: none;
+    /* border: none;
+    background-color: none; */
+    list-style: none;
+
+}
+ul li ul{
+    display: none;
+}
+ul li:hover ul{
+    display: inline-flex;
+  
+   
+}
+        .para {
+            position: relative;
+            right: 174px;
+        }
+
+        /* #imag{
+   
+    height: 104px;
+    width: 121px;
+    opacity: 0.6;
+    position: absolute;
+    right: 110px;
+    /* border: 2px solid black; */
+        /* border-radius: 30px;
+    } */
+
+        #imag:hover {
+            opacity: 1;
+            /* border-radius: 30px; */
+            /* border: 5px solid black; */
+        }
+
+        */ #button {
+            /* background-color: rgb(73, 66, 66); */
+            height: 44px;
+            width: 139px;
+            color: blanchedalmond;
+            text-emphasis: bold;
+            text-decoration: tan;
+            position: relative;
+            left: 215px;
+            /* text-shadow: beige; */
+        }
+
+        #sum {
+            display: inline;
+            position: relative;
+            color: blueviolet;
+            left: 240px;
+            font-size: large;
+            font-family: 'Baloo 2', cursive;
+            border: 3px solid slateblue;
+            padding: 4px 6px;
+            border-radius: 30px;
+        }
+
+        #box {
+            width: 24px;
+            height: 22px;
+            position: relative;
+            top: 6px;
+        }
+
+        #sum:hover {
+            /* text-decoration: underline; */
+            color: rgb(50, 11, 156);
+            /* text-emphasis: bold; */
+            font-size: larger;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* .button {
+            background-color: rgb(98, 193, 236);
+            position: relative;
+            left: 244px;
+            color: white;
+            height: 47px;
+            width: 120px;
+            font-size: large;
+            border-radius: 30px;
+            border: 2px solid;
+        }
+
+        .button a {
+            text-decoration: none;
+        }
+
+        .button a:hover {
+            color: brown;
+            font-weight: bold;
+            
+
+        }
+
+        .button:hover {
+            color: brown;
+            background-color: lightskyblue;
+            
+        } */
+        fieldset {
+
+            display: inline-block;
+            border-width: 14px;
+            border: 8px solid yellow;
+            position: relative;
+            left: 327px;
+            top: 34px;
+            width: 508px;
+            height: 220px;
+            animation-name: anime;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+
+        }
+
+        @keyframes anime {
+            from {
+                width: 600px;
+                height: 220px;
+                border: 9px solid darkgoldenrod;
+            }
+
+            to {
+
+                width: 508px;
+                height: 220px;
+            }
+        }
+
+        legend {
+            font-weight: bold;
+            background-color: chocolate;
+            border-radius: 40px;
+            padding: 5px 10px;
+            /* text-shadow:2px 2px white; */
+        }
+
+        #one {
+            position: relative;
+            height: 155px;
+            width: 155px;
+            top: 18px;
+            left: 21px;
+            max-width: 100%;
+        }
+
+        #two {
+            position: relative;
+            height: 149px;
+            width: 149px;
+            top: -203px;
+            left: 327px;
+            max-width: 100%;
+
+        }
+
+        #one:hover {
+            border: 4px solid darkorange;
+            border-radius: 90px;
+        }
+
+        #two:hover {
+            border: 4px solid darkorange;
+            border-radius: 90px;
+        }
+
+        legend:hover {
+            border: 2px solid ivory;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                height: 640px;
+                width: 360px;
+            }
+
+            fieldset {
+                position: absolute;
+
+                left: 7px;
+                top: 200px;
+                display: contents;
+                justify-content: center;
+                flex-wrap: wrap;
+                           }
+
+            legend {
+                position: relative;
+                top: 43px;
+                width: 190px;
+                left: 33px;
+            }
+
+            #two {
+                position: absolute;
+                top: 389px;
+                left: 38px;
+            }
+
+            #one {
+                position: relative;
+                top: 360px;
+                left: 27px;
+            }
+         
+            ul li:hover ul{
+    display: inline-flex;
+  
+   
+}
+
+            #poem {
+                /* position: absolute; */
+                position: absolute;
+                height: 92px;
+                width: 195px;
+                top: 282px;
+                left: 38px;
+
+            }
+        
+
+        header ::before {
+            background: url('https://cdn.pixabay.com/photo/2013/12/29/00/51/flower-234952__480.jpg');
+            content: "";
+            height: 120%;
+            width: 105%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.1;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+ul{
+    width: 200px;
+}
+        .navbar ul {
+            width: 297px;
+        }
+
+        .search input {
+            position: relative;
+            left: -14px;
+        }
+        .navbar ul{
+            width: auto;
+        }
+      
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul id="bruh">
+                <li class="lii"><a class="active" href="Kavita-E-Kalam.html">HOME</a></li>
+                <li class="lii"><a href="register.html">REGISTER</a></li>
+                <li class="lii"><a href="#" >MORE</a>
+                <ul>
+                    <li><a href="http://kavitakosh.org/" target="_blank">कविता कोश</a></li>
+                    <li><a href="https://bharatdiscovery.org/india/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0" target="_blank">भारतकोश</a></li>
+                    <li><a href="https://hinkhoj.com/" target="_blank">हिंखोज</a></li>
+
+                </ul>
+                </li>
+                <li class="lii"><a href="contactus.html">CONTACT US</a> </li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search This Website">
+                    <a href="https://google.com" target="_blank"><img id="box"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAAD6+vpvb2/W1tZeXl5paWn29vbNzc2mpqaUlJTn5+d3d3fj4+PS0tLr6+u6urpYWFiurq6fn58LCwtERER+fn4tLS1KSkocHBxQUFCIiIg5OTm0tLTAwMAVFRUkJCQ1HU9OAAAEaElEQVR4nO1a6bqiMAyFsooCKqu4vv9TjjatUK8LaeJw5xvOT7UkticnC3WcGTNm/HMQaZbFcebnf990fiq8xh2g3R8z8ZeMiyw5lO4T7IJ1+n3z6b56Zrz3Ifqq+cx7Yx3QJN9z4dQ+Wjt0waa9PH66/44L/mZgo1oV8VJ/IyL/uA92g68LfheipH98t/B/GhB5XB96B2Nm+/792bvEf+3lKbi7kLDaL+4UO3745bK+84MvJkWon/nJ/A25dqFcM9mPdOSPDTBfL1iw2M+V5h6y0UuEZmzBYV+FeY2S+njHRcWlso89z6hTokS0LyD8zhZh7bHwAOL6YiUre/CAJEmKTK+l5y0gHsvl51++wppkX59CZV2pKAKebNc7TkcjYkiOJKUh4xXEwEku3hDsX/UAMojVWnGWAUgseRP7WISlY9LPO4jK9m+ABHdE+9cy0pZICS0Ce0gtu6C3APjr0e07aWm1BVspYgwboASxwaqRTEIhh33Ht5EznyIgj5AsCHBrJAU7pnYTFA23puEpZwCiRCtKLn0m5FETkoY1ZsXWXsGfQab1BtOurTjKuR6R3FBEoxK1NnXoGzRIEuQlKwUUCRA7mkoZ5LMPnELImiTNgdEBqQTteBYW6LD5gPRW3BzGZ8SaU4ZukLm1HB8GAUNLYwAarPG5NSBW4z8xuQPV7ICFA9SC3ACSA7Kp5BivaEQNzoGENxmqNvcyPrls6U2hCdkiVuOVUHYzO0YH1siydCkLCMaBszzT1fjfR5K0jPPmDsvqkDkM0H1mYtFKvAG0OZj+FFawvQaz+D8ua1Xa4k9U1uUczfkNKbYqd/SEkOmV6N6mxrWbKjwFzDqwMSW9RpSRb7CQG4DtMvySqy6MLGcdsibYMUSi3ACLWQdIAT0nC9dW1GDUTW4Qa7QMa0D0BsRDgGGxnaKA7zQeAgMtBUXAmy9SVoZztM2rMN3aEcQA5r2t9Xo4BPtXLiDohHmremlrOzCFQbm7tbavi0NLEkMAEKVEPWRjcQprddWGZF+1CKia3lx43T5idQ1S7jY4JonBjQ+PqGX6r2CCOe3cAajVrXp/6laji6rCNUHt8mJ9UygZxYS4cx9BPYVU38loio9P8sMf5q9YET0Q97sxbvI2Qff3eJrA8ID89ifuLym16+c+iGxA/fp+g4GJB06U9Hf4Ll0Sp8PwFnl6XPUuut0thUamB1QeXJlgbGrZBqt9cVwft0ntbQ7Dr85bsCVMOlB5cEX2lGAP2C16QxvjG45OK0+aF3YVQnO6x8yDG6J4dXhh/LwpHukpVuYe8DTcUVYEzdl4cnmp6tMzpeTngUYaHxd7zwtDr06OpycXDDVMPeDquDEwecA3dxmN7/AA5YG5B4w8GA1TDxADQzbMPPgNPDD14P/kQW14wHNDBueBycSZB7/hFKb3YAoemBUK5y0FOw8mOAXH1IPJMxPnK+LR8Ca2P+AB50URFNQpsN4RQAEy02T//4ZwsvPXCCa2P2PGjN+HP7msKLEq/B0IAAAAAElFTkSuQmCC"
+                            alt=""></a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <img id="poem" src="WhatsApp Image 2020-07-21 at 10.00.12 AM.jpeg" alt="">
+
+
+        <div class="fiel">
+            <fieldset>
+                <legend>कविता संग्रह</legend>
+                <!--  -->
+                <a href="cypher2.html"><img id="one" src="circle-cropped.png" height="110px" width="110px" alt=""></a>
+
+                <br><br><br><br>
+
+                <a href="cypher2.html"><img id="two" src="circle-cropped (1).png" height="100px" width="100px"
+                        alt=""></a>
+
+
+
+
+                <a href="cypher2.html"><img src="" alt=""></a>
+
+            </fieldset>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

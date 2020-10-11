@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in Js</title>
+</head>
+<body>
+    Bruh this about loops
+    <script>
+        console.log("using for loop");
+
+        // for(let i=1; i<4 ; i++)
+        // {
+        //     console.log("Toffee-"+i);
+        // }
+
+        let friends = ["rohan", "SkillF", "swastik", "Snehil"];
+
+        // for(let i=0;i<friends.length;i++)
+        // console.log(friends[i]);
+
+        //to iterate over array -> for of
+        for (elements of friends){
+            console.log(elements);
+        }
+
+        // friends.forEach(function func(item){
+        //     console.log(item);
+        // })
+
+        let Employee = {
+            name : "Sangakara",
+            height : 5 ,
+            country : "SriLanka"
+        }
+
+        //to iterate over object -> for in
+        for (key in Employee)
+        {
+            console.log(`the ${key} of Employee is ${Employee[key]}`);
+        }
+
+
+    </script>
+</body>
+</html>

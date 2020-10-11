@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>यादें</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <style>
+         details[open] summary~* {
+            animation: open 1s ease-in-out;
+        }
+
+        @keyframes open {
+            0% {
+                opacity: 0;
+                margin-left: -20px
+            }
+
+            100% {
+                opacity: 1;
+                margin-left: 0px
+            }
+        }
+        body{
+            background: url(https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        .heading:hover {
+            color: blue;
+            border: 4px solid rgb(76, 24, 110);
+            padding: 3px 3px;
+            border-radius: 10px;
+        }
+
+        p {
+
+            font-family: 'Eczar', serif;
+
+        }
+
+        p:hover {
+            text-decoration: underline;
+        }
+
+
+        /* 
+        background-image: {
+            opacity: 0.3;
+        } */
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 10px 14px;
+            /* position: sticky; */
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            padding: 3px 11px;
+        }
+
+        .navbar li a:hover {
+            color: rgb(110, 110, 228);
+            /* background-color: rgb(43, 43, 165); */
+            /* text-decoration: underline; */
+            /* border-radius: 30px; */
+
+        }
+
+        .navbar li a.active {
+            color: blueviolet;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            border: 2px solid red;
+            border-radius: 18px;
+        }
+
+        .navbar {
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        .search {
+            float: right;
+            padding: 8px 50px;
+        }
+
+        .search input {
+            border-radius: 9px;
+            width: 160px;
+            height: 20px;
+
+        }
+
+        #box {
+            width: 24px;
+            height: 22px;
+            position: relative;
+            top: 6px;
+        }
+
+        .poems {
+            text-align: center;
+        }
+
+        .heading {
+
+
+
+            font-family: 'Arya', sans-serif;
+            font-size: large;
+            cursor: pointer;
+            width: 199px;
+            margin: 34px auto;
+        }
+
+        #title{
+            width: 447px;
+    margin: auto;
+    font-family: 'Kalam', cursive;
+    font-size: 33px;
+    margin: 53px auto;
+    color: rgb(87, 39, 5);
+    text-align: end;
+        }
+
+
+
+
+
+        @media (max-width: 500px) {
+            .navbar {
+                display: flex;
+                overflow: hidden;
+                flex-wrap: wrap;
+                width: 360px;
+                font-size: 15px;
+                height: 69px;
+
+            }
+
+            .navbar li a {
+                padding: 0 12px;
+                margin: 0;
+            }
+
+            .navbar li {
+                margin: 0;
+                padding: 0;
+            }
+
+            .navbar ul {
+                padding: 0;
+                border: none;
+            }
+
+            .search input {
+                width: 150px;
+                height: 12px;
+                font-size: 10px;
+            }
+
+            .search {
+                position: absolute;
+                left: 60px;
+                top: 39px;
+            }
+
+            #box {
+                height: 15px;
+                width: 16px;
+                right: -3px;
+                top: 3px;
+            }
+            .poems{
+                font-size: 15px;
+            }
+            .heading{
+                font-size: 18px;
+            }
+            #title{
+                font-size: 20px;
+    text-align: center;
+    width: 259px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="index.html">HOME</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+                <li><a href="#butone">MORE</a></li>
+                <li><a href="contactus.html">CONTACT US</a> </li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search This Website">
+                    <a href="https://google.com" target="_blank"><img id="box"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAAD6+vpvb2/W1tZeXl5paWn29vbNzc2mpqaUlJTn5+d3d3fj4+PS0tLr6+u6urpYWFiurq6fn58LCwtERER+fn4tLS1KSkocHBxQUFCIiIg5OTm0tLTAwMAVFRUkJCQ1HU9OAAAEaElEQVR4nO1a6bqiMAyFsooCKqu4vv9TjjatUK8LaeJw5xvOT7UkticnC3WcGTNm/HMQaZbFcebnf990fiq8xh2g3R8z8ZeMiyw5lO4T7IJ1+n3z6b56Zrz3Ifqq+cx7Yx3QJN9z4dQ+Wjt0waa9PH66/44L/mZgo1oV8VJ/IyL/uA92g68LfheipH98t/B/GhB5XB96B2Nm+/792bvEf+3lKbi7kLDaL+4UO3745bK+84MvJkWon/nJ/A25dqFcM9mPdOSPDTBfL1iw2M+V5h6y0UuEZmzBYV+FeY2S+njHRcWlso89z6hTokS0LyD8zhZh7bHwAOL6YiUre/CAJEmKTK+l5y0gHsvl51++wppkX59CZV2pKAKebNc7TkcjYkiOJKUh4xXEwEku3hDsX/UAMojVWnGWAUgseRP7WISlY9LPO4jK9m+ABHdE+9cy0pZICS0Ce0gtu6C3APjr0e07aWm1BVspYgwboASxwaqRTEIhh33Ht5EznyIgj5AsCHBrJAU7pnYTFA23puEpZwCiRCtKLn0m5FETkoY1ZsXWXsGfQab1BtOurTjKuR6R3FBEoxK1NnXoGzRIEuQlKwUUCRA7mkoZ5LMPnELImiTNgdEBqQTteBYW6LD5gPRW3BzGZ8SaU4ZukLm1HB8GAUNLYwAarPG5NSBW4z8xuQPV7ICFA9SC3ACSA7Kp5BivaEQNzoGENxmqNvcyPrls6U2hCdkiVuOVUHYzO0YH1siydCkLCMaBszzT1fjfR5K0jPPmDsvqkDkM0H1mYtFKvAG0OZj+FFawvQaz+D8ua1Xa4k9U1uUczfkNKbYqd/SEkOmV6N6mxrWbKjwFzDqwMSW9RpSRb7CQG4DtMvySqy6MLGcdsibYMUSi3ACLWQdIAT0nC9dW1GDUTW4Qa7QMa0D0BsRDgGGxnaKA7zQeAgMtBUXAmy9SVoZztM2rMN3aEcQA5r2t9Xo4BPtXLiDohHmremlrOzCFQbm7tbavi0NLEkMAEKVEPWRjcQprddWGZF+1CKia3lx43T5idQ1S7jY4JonBjQ+PqGX6r2CCOe3cAajVrXp/6laji6rCNUHt8mJ9UygZxYS4cx9BPYVU38loio9P8sMf5q9YET0Q97sxbvI2Qff3eJrA8ID89ifuLym16+c+iGxA/fp+g4GJB06U9Hf4Ll0Sp8PwFnl6XPUuut0thUamB1QeXJlgbGrZBqt9cVwft0ntbQ7Dr85bsCVMOlB5cEX2lGAP2C16QxvjG45OK0+aF3YVQnO6x8yDG6J4dXhh/LwpHukpVuYe8DTcUVYEzdl4cnmp6tMzpeTngUYaHxd7zwtDr06OpycXDDVMPeDquDEwecA3dxmN7/AA5YG5B4w8GA1TDxADQzbMPPgNPDD14P/kQW14wHNDBueBycSZB7/hFKb3YAoemBUK5y0FOw8mOAXH1IPJMxPnK+LR8Ca2P+AB50URFNQpsN4RQAEy02T//4ZwsvPXCCa2P2PGjN+HP7msKLEq/B0IAAAAAElFTkSuQmCC"
+                            alt=""></a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="title">
+        एक 'अ'नाम साथी की याद में ....
+    </div>
+
+    <section>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">स्मृति चिन्ह</summary><br>
+                <p>
+                    उन बीते स्वर्णिम पल को<br>
+                    यादों में सहेजकर रक्खा है<br>
+                    स्मृति चिन्हों से<br>
+                    ये मेरी अमूल्य निधि<br>
+                    ये मेरा राजदार ,<br>
+                    मेरे जीवन का पतवार .<br>
+
+                    ***
+
+
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">प्रतीक्षा की परीक्षा</summary><br>
+                <p>
+                    इंतजार में भी मजा है<br>
+                    यह आज जाना<br>
+                    हर एक आहट के साथ<br>
+                    निगाहों का उठना<br>
+                    दिल की धडकनों का<br>
+                    रह – रह कर बढ़ जाना<br>
+                    प्रेरणा - श्रोत कहीं और है<br>
+                    कोई और है<br>
+                    यह राज आज जाना<br>
+                    ‘ प्रतीक्षा की परीक्षा ‘<br>
+
+                    ***
+
+
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">इंतजार</summary><br>
+                <p>
+                    पावस कण की देख बौछारें<br>
+                    वक्त बिछड़ने का याद आया<br>
+                    ऐसे ही झरती थी उन नयनों में<br>
+                    जिस पर मैंने था सपना सजाया<br>
+
+                    तब ना समझा था<br>
+                    उसकी भाषा<br>
+                    अब समझा हूँ<br>
+                    तू अक्षुण जल निधि<br>
+                    मै चिर थल प्यासा<br>
+                    अहा ! ये कैसा अभिमान<br>
+                    अश्रु पंक्ति विखंडन का<br>
+                    मिल पाई थी मुक्त हवा<br>
+                    झोंक में जिसके<br>
+                    रचा था<br>
+                    मर्दन मंडन का<br>
+                    अब तो अविरल बहती है<br>
+                    नहीं कोई निश्चित मास<br>
+                    अब आवोगे<br>
+                    तब आवोगे<br>
+                    पल रही मन में ये आस ....<br>
+
+
+                    ***
+
+
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">जब कभी आना</summary><br>
+                <p>
+                 
+                    जब कभी आना <br>
+                    निर्मल सरिता बनकर आना <br>
+                    मन जब एकाकीपन से शुष्क हो जाये <br>
+                    
+                    जब कभी आना <br>
+                    सुमधुर गीत बनकर दस्तक देना <br>
+                    मन जब उदासीपन से भारी हो जाये <br>
+                    
+                    जब कभी आना <br>
+                    ज्योति दीप बनकर चमकना<br>
+                    मन जब अंधेरों से घिर जाये <br>
+                    
+                    जब कभी आना <br>
+                    सुदृढ़ सहारा बनकर हाथ थाम लेना <br>
+                    मन जब अपनों से धोखा खा जाये <br>
+                    
+                    जब कभी आना <br>
+                    दिव्य सूरज बनकर निकलना <br>
+                    मन जब दुखों के बादल से घिर जाये <br>
+                    
+                    जब कभी आना <br>
+                    अमृत बिंदु बनकर गिरना <br>
+                    मन जब इंतजार से सूखा जाये <br>
+                    
+                    जब कभी आना <br>
+                    यम बनकर तुम ही आना <br>
+                    इंतकाल जब पास आ जाये <br>
+                    ***
+                    
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">अनोखा प्यार</summary><br>
+                <p>
+                    कैसा अनोखा प्यार है <br>
+                    न हो सके अरमान पूरा <br>
+                    ऐसा मुराद चुना है <br>
+                    
+                    ना हो कभी ख़त्म <br>
+                    ऐसा इंतजार चुना है <br>
+                    अंतहीन राह के सफ़र का <br>
+                    इंतजाम चुना है <br>
+                    
+                    यादोँ के सहारे किसी के <br>
+                    मुगालते में जी लेने के लिए <br>
+                    नायाब सूरत- ए-आसान <br>
+                    चुना है <br>
+                    
+                    भटकते रहने के लिए <br>
+                    बेपता शहर का <br>
+                    मुकाम चुना है <br>
+                    
+                    
+                    ***
+               
+
+                </p>
+            </details>
+        </div>
+
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">वहम</summary><br>
+                <p>
+                    हम से मैं हुआ तो जाना <br>
+                    हम थे तो <br>
+                    तुम्हारे साथ का <br>
+                    कितना अहम् था 
+                    <br>
+                    अब अकेला रह गया हूँ <br>
+                    कैसे कहते है सब <br>
+                    की अहंकारित है मैं <br>
+                    
+                    टूट चुका है वहम <br>
+                    अब तो  <br>
+                    मैं होने पर <br>
+                    अधुरा <br>
+                    महसूस करने लगा हूँ ...<br>
+                    
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">मिलन</summary><br>
+                <p>
+                    ज्यों-ज्यों मुझसे मिलोगे<br>
+                    त्यों-त्यों मुझमे मिलोगे<br>
+                    आहिस्ता -आहिस्ता<br>
+                    कभी भी मुझसे मिलोगे<br>
+                    मुझमे अपने से ही मिलोगे<br>
+                    आहिस्ता -आहिस्ता<br>
+                    जब भी मुझे मिलोगे<br>
+                    पर मुझे ही मिलोगे<br>
+                    आहिस्ता -आहिस्ता<br>
+                    मुझे गर कही भी मिलोगे<br>
+                    यूँ ही ना मिलोगे<br>
+                    आहिस्ता -आहिस्ता<br>
+                    इसी जनम में मिलोगे<br>
+                    इसी जमीं में मिलोगे<br>
+                    आहिस्ता -आहिस्ता<br>
+                    मुझमे जब तुम मिलोगे<br>
+                    फिर केवल मुझमे  मिलोगे ...<br>
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">परिचय</summary><br>
+                <p>
+                 
+                    मैं फूल नहीं , मैं शूल हूँ <br>
+                    ईश्वर का विवेकमय भूल हूँ <br>
+                    हँसना और हँसाना क्या जानूँ !<br>
+                    
+                    मेरा खिलना क्या ! और गिर जाना क्या !<br>
+                    इस प्र’नियमन को क्या जानूँ !<br>
+                    
+                    मुझसे प्यार की आस फ़िजूल है <br>
+                    सीने में पत्थर दिल है <br>
+                    पाक मन को ललचाना क्या जानूँ !<br>
+                     
+                    औरों के पीड़ा का मुझे भान नहीं <br>
+                    पंहुचाई है पीड़ा हरदम <br>
+                    सुंकू – मरहम को क्या जानूँ !<br>
+                    <br>
+                    ना शीश चढूं<br>
+                    ना वेणी में गुथा जाऊ !<br>
+                    बस चिर यौवन सा <br>
+                    डाली में सूखता चला जाऊं !<br>
+                    
+                    बस इतना रहम कर देना <br>
+                    रहने देना वहीँ डाल पर <br>
+                    राह में ना डाल देना <br>
+                    तेरी नियते – इमां को क्या जानूँ !<br>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    अरे दिलवालों !!!<br>
+                    एक कठिन सत्य कहता हूँ <br>
+                    तुम भक्षक , मैं रक्षक हूँ <br>
+                    मैं खुला , तुम छद्म वेष में <br>
+                    बस इतना मरम मैं जानूँ<br>
+                    
+                    हाँ , मैं शूल हूँ <br>
+                    फूल नहीं <br>
+                    ईश्वर की भूल सहीं<br>
+                    
+                    है मेरा मन पाक <br>
+                    तेरे सीने में छल है <br>
+                    फूल नहीं <br>
+                    बने रहना शूल ही कबूल है ...<br>
+                    
+                    
+                    ***
+                    
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">तुम ही हो </summary><br>
+                <p>
+                    तुम हो <br>
+                    तुमसे है ;<br>
+                    प्रतिरूप ही तेरा है <br>
+                    तुम ही हो विश्व इकाई<br>
+                    
+                    तुम ही हो<br>
+                    पावन जीवन रेखा , गंगा हिन्द की <br>
+                    
+                    तुम ही हो<br>
+                    स्वाति नक्षत्र की स्वच्छ सलिल <br>
+                    
+                    तुम ही हो<br>
+                    उजयाली धवल चांदनी निशा की स्वर्णिम शिखा <br>
+                    
+                    तुम ही हो<br>
+                    मधुर समरस घोलती महिना सावन का <br>
+                    
+                    तुम ही हो<br>
+                    नित नवल शुभ प्रभात की पहली किरण <br>
+                    
+                    तुम ही हो<br>
+                    सागर कोख की अमूल्य सीप मोती <br>
+                    
+                    तुम ही हो<br>
+                    सुदूर नील गगन का विस्तार <br>
+                    
+                    तुम ही हो<br>
+                    मादक सौरभ पल्लवित प्रसून की <br>
+                    
+                    तुम ही हो<br>
+                    सप्तम सरगम सुर संगीत की <br>
+                    
+                    तुम ही हो<br>
+                    नभपति आफ़ताब का रक्तिम रमक <br>
+                    
+                    तुम ही हो<br>
+                    अराध्य मूरत कल्याणी की <br>
+                    
+                    तुम ही हो<br>
+                    रगों में दौड़ती रक्त का रंग <br>
+                    
+                    तुम ही हो<br>
+                    कम्पन अविभाज्य परमाणु का ,कण मौलिक का 
+                    
+                    तुम ही हो<br>
+                    प्राणवायु की निर्मल सौम्य चपलता <br>
+                    
+                    तुम ही हो<br>
+                    स्वचलित,स्वनिर्मित प्रकृति की अदृश्य संचालिका <br>
+                    
+                    तुम ही हो<br>
+                    सर्वशक्तिमान सृजनहार-चित्रकार की छेनी और तूलिका ...<br>
+                    
+                    तुम ही हो ...<br>
+                    
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">चाहत</summary><br>
+                <p>
+                    ओ आली !<br>
+                    तेरा ‘स्वप्निल’ मेरा ‘स्नेहिल’<br>
+                    मैं स्नेह प्यासा <br>
+                    लेना बाँट मुझ संग मिल<br>
+                    
+                    ‘बेटू’ तेरा नटखट ‘कान्हा’<br>
+                    शरारती ‘अति’<br>
+                    
+                    काश हमको भी सताता <br>
+                    रर-रह कर रुलाता <br>
+                    पल में रूठता , हँसता और हँसाता<br>
+                    फिर दोनों रुठते <br>
+                    और तू खीझती और मनाती <br>
+                    बस निस दिन का होता ये खेल <br>
+                    
+                    पाई ऐसी अनमोल रतन <br>
+                    सूरज बन चमके नभ में <br>
+                    देना ऐसी जतन <br>
+                    अपना आँचल उनका सम्बल <br>
+                    और मेरी दुआओं का कर मेल <br>
+                    
+                    मेरा सब कुछ तेरा <br>
+                    तुमही ही मेरा सब कुछ <br>
+                    बस चाह है तेरी चाहत का <br>
+                    बाँट लेना <br>
+                    मुझ संग-दिल संग मिल ...<br>
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">पथ-व–पथ </summary><br>
+                <p>
+                    हे देवियों !<br>
+                    देवता बनने की चाह छोड़ो <br>
+                    प्रकृति विरुद्ध चलने की राह छोड़ो <br>
+                    समाधिकार पा नहीं <br>
+                    विशेषाधिकार खो रहे हो <br>
+                                    पथ पर अपने ही कांटे विकार बो रहे हो <br>
+                    
+                    राह में पड़े हर पत्थर को पूजा नहीं जाता <br>
+                    स्थापित,अनुबंधित की कीमत होती है <br>
+                    सुसंस्कृत परिवेश को बंधन का नाम न दो <br>
+                    मर्यादित,परिमित जीवन ही आर्यों की जीनत होती है <br>
+                    
+                    उस प्रतिमा की सूरत न बिगाड़ो<br>
+                                  जो ममतामयी,करुणामयी,कल्याणी कहलाती है <br>
+                                        विरक्त हो इन अलन्करणों से <br>
+                                        क्यों ? विकृति स्वयं लाती हो ...<br>
+                    
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+        
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">शापित शिखा</summary><br>
+                <p>
+                    अरी नार तू चंचल,निष्ठुर ,<br><br>
+                    छद्मी दीपशिखा सी <br><br>
+                    
+                    क्यूँ ! औरों पर जलती हो <br><br>
+                    अपने आप सुलगती हो <br><br>
+                    
+                    दिखा अपना रूप लुभावनी <br><br>
+                    भोले शलभ – मानस को छलती हो <br><br>
+                    
+                    हाँ यह छल है <br><br>
+                    केवल छलना है<br><br>
+                    तू ह्रदय विहीन, विश्वास घातिनी<br><br>
+                    
+                    जलाकर पंख क्यूँ ,इतना और मचलती हो <br><br>
+                    सताकर दूसरों को ,ख़ुशी अपार बटोरती हो <br><br>
+                    
+                    बढाले अपना और आकार <br><br>
+                    करले सपना साकार<br><br> 
+                    सींच ले बाग उनके खून से <br><br>
+                    पायेगी लाली हरियाली ,ओ अभिमानी <br><br>
+                    
+                    खेलना दूसरों के जीवन से <br>
+                    है तेरा ये नित्य - प्रिय खेल <br>
+                    तुझको भाता रंग लाल ही<br>
+                    रंगती चुनरी इसी से <br>
+                    ओ निष्ठुर हत्यारिनी <br>
+                    
+                    
+                    
+                    
+                    
+                    
+                    जा छलनी<br>
+                    तू शापमय शमा बन खुद जलेगी <br>
+                    कोई ना रोने वाला होगा <br>
+                    तिल-तिल, पल-पल, जल-जल कर <br>
+                    तन अपने ही आसुंओ से भिगोना<br> 
+                    
+                    पर रख याद ए पापिनी <br>
+                    डूब आंसुओ के समंदर से <br>
+                    खुद ही बुझ जावोगी <br>
+                    फिर भी ना होगी ,तपस्या तेरी पूरी <br>
+                    ओ कलंकिनी <br>
+                    
+                    तुझे फिर से जला रुलाया जायेगा <br>
+                    चलता रहेगा ये चिर काल तक <br>
+                    जब तक समझ में ये तेरी ना आएगा <br>
+                    कि वो था प्यासा <br>
+                    केवल प्यार का ...<br>
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+        
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">स्वागत है अजनबी</summary><br>
+                <p>
+                    क्यों ? एक बार फिर <br>
+                    किसी से मिलकर <br>
+                    अपनापन महसूस करने लगा हूँ <br>
+                    क्या ? बीती बातें फिर <br>
+                    दुहराई ना जाएगी<br>
+                    
+                    ग़मों का चादर फेक <br>
+                    मरहमों पर हाथ रख <br>
+                    फिर एक फैसला किया है <br>
+                    नयी जिंदगी जीने का हौसला किया है <br>
+                    
+                    पर जोश ख़त्म हो चुका है<br>
+                    कदम आगे बढ़ता ही नहीं <br>
+                    
+                    
+                    तुम ही आ जाओ <br>
+                    पर आकर ,बन जाना ना अजनबी <br>
+                    स्वागत है अजनबी <br>
+                    अजनबी स्वागत है ...<br>
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+        
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">MY PHIL</summary><br>
+                <p>
+                    WHAT IS YOUR NAME <br>
+                    I DON’T KNOW<br>
+                    
+                    WHO ARE YOU <br>
+                    I DON’T KNOW<br>
+                    
+                    WHER’S YOUR RESIDE <br>
+                    I DON’T KNOW<br>
+                    
+                    BUT I DO FEEL...<br>
+                    BEAT<br>
+                    IN MY HEART<br>
+                    
+                    HENCE,THIS ONE IS MY LOVE <br>
+                    MY PHIL ...<br>
+                    
+                    
+                    ***
+                    
+
+                </p>
+            </details>
+        </div>
+
+
+        <div class="poems">
+            <details class="poem">
+                <summary class="heading">हायकू</summary><br>
+                <p>
+                    जब कभी गया हूँ <br>
+                    आईना के सामने <br>
+                    निराश होकर लौटा हूँ <br>
+                    हकीकत से बाबस्ता <br>
+                    कितना कठोर जान पड़ता है <br>
+                    ***
+                    <br>
+                    आँखों में समेट रखे है समंदर <br>
+                    पर कितने बदनसीब है कि<br>
+                    रो भी नहीं सकते खुलकर <br>
+                    ***
+                    <br>
+                    धुप में कितना तपन है <br>
+                    दिये में कितना जलन है <br>
+                    ये वे बताएँगे <br>
+                    जिनका जीवन हवन है <br>
+                    ***
+                    <br>
+                    
+
+                </p>
+            </details>
+        </div>
+
+        
+
+    </section>
+</body>
+
+</html>

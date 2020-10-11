@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(https://i.ytimg.com/vi/L2WgJgAULo8/maxresdefault.jpg);
+            background-repeat: no-repeat;
+            background-size: 150%;
+        }
+/* 
+        background-image: {
+            opacity: 0.3;
+        } */
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 10px 14px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            padding: 3px 11px;
+        }
+
+        .navbar li a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar {
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        .search {
+            float: right;
+            padding: 8px 50px;
+        }
+
+        .search input {
+            border-radius: 9px;
+            width: 160px;
+            height: 20px;
+
+        }
+
+        #clickable img {
+            position: relative;
+            top: 20px;
+            left: 424px;
+    opacity: 0.53;
+        }
+
+        #poem {
+            color: white;
+            height: 200px;
+            position: relative;
+            left: 300px;
+            top: 67px;
+        }
+
+        #button {
+            /* background-color: rgb(73, 66, 66); */
+            height: 44px;
+            width: 139px;
+            color: blanchedalmond;
+            text-emphasis: bold;
+            text-decoration: tan;
+            position: relative;
+            left: 215px;
+            /* text-shadow: beige; */
+        }
+
+        #sum {
+            display: inline;
+            position: relative;
+            left: 240px;
+            font-size: large;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        #sum:hover {
+            text-decoration: underline;
+            color: rgb(50, 11, 156);
+            text-emphasis: bold;
+            font-size: larger;
+            cursor: pointer;
+        }
+
+        .button {
+            background-color: rgb(98, 193, 236);
+            position: relative;
+            left: 244px;
+            color: white;
+            height: 47px;
+            width: 120px;
+            font-size: large;
+            border-radius: 30px;
+            border: 2px solid;
+        }
+
+        .button a {
+            text-decoration: none;
+        }
+
+        .button a:hover {
+            color: brown;
+            font-weight: bold;
+            
+
+        }
+
+        .button:hover {
+            color: brown;
+            background-color: lightskyblue;
+            
+        }
+        #box{
+            width: 24px;
+    height: 22px;
+    position: relative;
+    top: 6px;
+        }
+        #box:hover{
+            width: 25px;
+    height: 23px;
+        }
+     li :hover ul li a {
+background-color: aqua;
+display: block;
+     }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="">CONTENT</a></li>
+                <li><a href="">SERVICES</a>
+                <ul>
+                    <li><a href=""> raftaar</a></li>
+                    <li><a href="">tera harjai</a> </li>
+                </ul>
+            </li>
+                <li><a href="">CONTACT US</a> </li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search This Website">
+                    <a href="https://google.com" target="_blank"><img id="box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAAD6+vpvb2/W1tZeXl5paWn29vbNzc2mpqaUlJTn5+d3d3fj4+PS0tLr6+u6urpYWFiurq6fn58LCwtERER+fn4tLS1KSkocHBxQUFCIiIg5OTm0tLTAwMAVFRUkJCQ1HU9OAAAEaElEQVR4nO1a6bqiMAyFsooCKqu4vv9TjjatUK8LaeJw5xvOT7UkticnC3WcGTNm/HMQaZbFcebnf990fiq8xh2g3R8z8ZeMiyw5lO4T7IJ1+n3z6b56Zrz3Ifqq+cx7Yx3QJN9z4dQ+Wjt0waa9PH66/44L/mZgo1oV8VJ/IyL/uA92g68LfheipH98t/B/GhB5XB96B2Nm+/792bvEf+3lKbi7kLDaL+4UO3745bK+84MvJkWon/nJ/A25dqFcM9mPdOSPDTBfL1iw2M+V5h6y0UuEZmzBYV+FeY2S+njHRcWlso89z6hTokS0LyD8zhZh7bHwAOL6YiUre/CAJEmKTK+l5y0gHsvl51++wppkX59CZV2pKAKebNc7TkcjYkiOJKUh4xXEwEku3hDsX/UAMojVWnGWAUgseRP7WISlY9LPO4jK9m+ABHdE+9cy0pZICS0Ce0gtu6C3APjr0e07aWm1BVspYgwboASxwaqRTEIhh33Ht5EznyIgj5AsCHBrJAU7pnYTFA23puEpZwCiRCtKLn0m5FETkoY1ZsXWXsGfQab1BtOurTjKuR6R3FBEoxK1NnXoGzRIEuQlKwUUCRA7mkoZ5LMPnELImiTNgdEBqQTteBYW6LD5gPRW3BzGZ8SaU4ZukLm1HB8GAUNLYwAarPG5NSBW4z8xuQPV7ICFA9SC3ACSA7Kp5BivaEQNzoGENxmqNvcyPrls6U2hCdkiVuOVUHYzO0YH1siydCkLCMaBszzT1fjfR5K0jPPmDsvqkDkM0H1mYtFKvAG0OZj+FFawvQaz+D8ua1Xa4k9U1uUczfkNKbYqd/SEkOmV6N6mxrWbKjwFzDqwMSW9RpSRb7CQG4DtMvySqy6MLGcdsibYMUSi3ACLWQdIAT0nC9dW1GDUTW4Qa7QMa0D0BsRDgGGxnaKA7zQeAgMtBUXAmy9SVoZztM2rMN3aEcQA5r2t9Xo4BPtXLiDohHmremlrOzCFQbm7tbavi0NLEkMAEKVEPWRjcQprddWGZF+1CKia3lx43T5idQ1S7jY4JonBjQ+PqGX6r2CCOe3cAajVrXp/6laji6rCNUHt8mJ9UygZxYS4cx9BPYVU38loio9P8sMf5q9YET0Q97sxbvI2Qff3eJrA8ID89ifuLym16+c+iGxA/fp+g4GJB06U9Hf4Ll0Sp8PwFnl6XPUuut0thUamB1QeXJlgbGrZBqt9cVwft0ntbQ7Dr85bsCVMOlB5cEX2lGAP2C16QxvjG45OK0+aF3YVQnO6x8yDG6J4dXhh/LwpHukpVuYe8DTcUVYEzdl4cnmp6tMzpeTngUYaHxd7zwtDr06OpycXDDVMPeDquDEwecA3dxmN7/AA5YG5B4w8GA1TDxADQzbMPPgNPDD14P/kQW14wHNDBueBycSZB7/hFKb3YAoemBUK5y0FOw8mOAXH1IPJMxPnK+LR8Ca2P+AB50URFNQpsN4RQAEy02T//4ZwsvPXCCa2P2PGjN+HP7msKLEq/B0IAAAAAElFTkSuQmCC" alt=""></a> 
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div id="clickable">
+        <a href="position.html"><img src="poem.png" alt=""></a>
+
+
+        <div id="poem">
+            <details>
+                <summary id="sum">कविता संग्रह</summary>
+                <p class="para">
+                    <button class="button"><a href="cypher.html">सिफर</a></button>
+                </p>
+                <p class="para">
+
+                    <button class="button"> <a href="">यादें</a> </button>
+                </p>
+            </details>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

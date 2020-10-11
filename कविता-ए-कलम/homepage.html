@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 150%;
+            width: 150%;
+            z-index: -1;
+            background: url(https://images.wallpaperscraft.com/image/footprint_sand_beach_179084_3840x2160.jpg);
+            background-size: cover;
+            opacity: 1;
+        }
+
+        .navigation {
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: black;
+            border-radius: 10px;
+
+        }
+
+        .navigation li {
+            list-style: none;
+            padding: 7px 4px;
+        }
+
+        .navigation li a {
+            text-decoration: none;
+            color: white;
+            padding: 6px 20px;
+            font-size: 1.1rem;
+
+        }
+        legend{
+            color: rgb(25, 0, 255);
+            background-color: orangered;
+            border-radius: 10px;
+            padding: 5px 3px;
+        }
+        .pic{
+            height: 130px;
+            width: 130px;
+            display: inline;
+            margin: 20px auto;
+        }
+        fieldset{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* width: 500px; */
+            flex-direction: row;
+            border: 4px solid yellow;
+            border-radius: 10px;
+            margin: 10px auto;
+        }
+        
+        fieldset a{
+            display: flex;
+            
+
+        }
+        /* section{
+            display: flex;
+            width: 600px;
+            margin: auto;
+            margin: 20px auto;
+        } */
+        .boxx{
+            display: flex;
+            align-items: center;
+            /* justify-content: flex-end; */
+            margin: auto;
+            width: 400px;
+        }
+        .but a{
+            text-decoration: none;
+            color: black;
+        }
+        .but{
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 3px 4px goldenrod;
+            margin: 3px 10px;
+
+            
+        }
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+
+            <li><a class="active" href="index.html">HOME</a></li>
+            <li><a href="register.html">REGISTER</a></li>
+            <li><a href="#">MORE</a></li>
+            <li><a href="contactus.html">CONTACT US</a> </li>
+
+
+        </div>
+    </header>
+
+  
+        <fieldset>
+
+            <legend> POEMS</legend>
+            <a href=""><img id="one" class="pic" src="circle-cropped.png"></a>
+            <a href=""><img id="two" class="pic" src="circle-cropped (1).png"></a>
+
+        </fieldset>
+   
+
+
+    
+    
+        <div class="boxx">
+    
+            <button class="but" >
+                <a href="https://bharatdiscovery.org/india/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0"
+                    target="_blank">भारतकोश</a>
+            </button>
+            <!-- <br>
+    <br> -->
+            <button class="but">
+                <a href="https://hinkhoj.com/" target="_blank">हिंखोज</a>
+            </button>
+            <button class="but">
+    <a href="http://kavitakosh.org/">कविता कोश</a>
+            </button>
+        </div>
+
+  
+</body>
+
+</html>

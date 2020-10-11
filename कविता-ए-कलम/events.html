@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Js</title>
+<Style>
+    body{
+        background-color: palevioletred;
+    }
+    #but{
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+</Style>
+</head>
+
+<body>
+    <h1>This is heading </h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorum qui dolor temporibus mollitia
+        accusantium praesentium. Debitis deserunt velit itaque id deleniti, distinctio in necessitatibus non consectetur
+        neque repudiandae eum voluptatibus omnis, iusto explicabo quisquam iste a rerum dignissimos. Quaerat unde
+        voluptatibus voluptates, minima cupiditate aut itaque consectetur perferendis quod tempora sint sit quas rerum
+        explicabo odit deleniti sapiente voluptate. Ullam qui veritatis quisquam ipsam ad. Recusandae officiis
+        consectetur quo accusamus possimus veniam, dolorem in quam ullam harum quibusdam illum rerum, saepe suscipit ea
+        natus, porro non ex error illo! Ipsam aperiam enim, esse repudiandae quidem, unde delectus sequi natus et
+        laborum architecto laboriosam. Eligendi ratione cumque quas illum libero natus minus, facilis enim debitis totam
+        quibusdam, aliquid in eveniet, exercitationem nam laudantium.</p>
+    <button id="but" onclick="toggleHide()">Hide/Show</button>
+
+    <script>
+        function toggleHide(){
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+
+            if(para.style.display != 'none')
+            {
+                para.style.display = 'none';   
+            }
+            else
+            {
+                para.style.display = 'block';
+
+            }
+        }
+    </script>    
+</body>
+
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            /* 
+            background-repeat: repeat-y;
+            background-size: 100%; */
+            background-color: black;
+
+        }
+
+        header::before {
+            /* background: url('https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'); */
+            background: url('https://img.freepik.com/free-photo/symbol-up-text-written-keyboard-button_2227-1499.jpg?size=626&ext=jpg&ga=GA1.2.1419542384.1595229237');
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 150%;
+            z-index: -1;
+            opacity: 0.3;
+            /* background-repeat: repeat-y ; */
+            background-size: cover;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 10px 14px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            padding: 3px 11px;
+        }
+
+        .navbar li a.active {
+            color: blueviolet;
+        }
+
+        .navbar li a:hover {
+            color: rgb(110, 110, 228);
+            /* background-color: rgb(43, 43, 165); */
+            /* text-decoration: underline; */
+            /* border-radius: 30px; */
+
+        }
+
+        .navbar ul {
+            overflow: auto;
+            border: 2px solid red;
+
+            border-radius: 18px;
+        }
+
+        .navbar {
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        .search {
+            float: right;
+            padding: 8px 50px;
+        }
+
+        .search input {
+            border-radius: 9px;
+            width: 160px;
+            height: 20px;
+
+        }
+
+        #box {
+            width: 24px;
+            height: 22px;
+            position: relative;
+            top: 6px;
+        }
+
+        .form {
+            margin: auto;
+            display: table-caption;
+            position: relative;
+            left: 400px;
+            /* border: 3px solid rgb(50, 42, 165); */
+            /* border-radius: 20px; */
+            padding: 30px 50px;
+        }
+
+        label {
+            font-size: x-large;
+            color: rgb(220 39 173);
+            /* color: antiquewhite; */
+            /* background-color: darkorange; */
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        /* 
+        label:hover {
+            background-color: rgba(26, 24, 24, 0.897);
+            border-radius: 12px;
+            padding: 1px 9px;
+        } */
+
+        .in {
+            font-size: x-small;
+            border: 1px solid rgb(0, 255, 34);
+            /* border-radius: 5px; */
+            border-radius: 23px;
+            background-color: lightgray;
+            color: black;
+            position: relative;
+            top: 3px;
+            width: 289px;
+            height: 36px;
+            text-align: center;
+        }
+
+        .in:hover {
+            background-color: white;
+        }
+
+        #submit {
+            background-color: indianred;
+            border-radius: 20px;
+            width: 300px;
+            height: 42px;
+            font-family: 'Poppins', sans-serif;
+            font-size: large;
+
+        }
+
+        #reset {
+            background-color: indianred;
+            border-radius: 20px;
+            width: 300px;
+            height: 42px;
+            font-family: 'Poppins', sans-serif;
+            font-size: large;
+        }
+
+        #reset:hover {
+            border: 1px solid rgb(0, 255, 34);
+            cursor: pointer;
+            box-shadow: 3px 3px 10px rgba(172, 255, 47, 0.664);
+
+        }
+
+        #submit:hover {
+            border: 1px solid rgb(0, 255, 34);
+            cursor: pointer;
+            box-shadow: 3px 3px 10px rgba(172, 255, 47, 0.637);
+
+        }
+
+        #top {
+            color: white;
+            font-family: cursive;
+            font-size: larger;
+            margin: 23px;
+            padding: 14px 14px;
+            background-color: tomato;
+            border-radius: 21px;
+            width: 256px;
+            position: relative;
+            right: 20px;
+            box-shadow: 5px 6px 12px slateblue;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                height: 640px;
+                width: 360px;
+            }
+
+            header::before {
+                /* background: url('https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'); */
+                background: url('https://images.pexels.com/photos/1784578/pexels-photo-1784578.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+                content: "";
+                position: absolute;
+                width: 105%;
+                height: 120%;
+                z-index: -1;
+                opacity: 0.5;
+                /* background-repeat: repeat-y ; */
+                background-size: cover;
+                top: 0;
+                left: 0;
+            }
+
+            .form {
+                position: absolute;
+                top: 195px;
+                left: -14px;
+            }
+
+            /* .navbar ul{
+           width: 80px;
+       } */
+            ul {
+                width: 305px;
+                height: 128px;
+                background: black;
+            }
+           
+            label{
+                color: rgb(225, 228, 58);
+            }
+            .navbar{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 350px;
+    font-size: 15px;
+    height: 69px;
+    
+}
+.navbar li a{
+padding: 4px 6px;
+margin: 0;
+}
+.navbar li{
+margin: 0;
+padding: 0;
+}
+.navbar ul{
+    padding: 0;
+    border: none;
+}
+.search input{
+    width: 150px;
+    height: 12px;
+    font-size: 10px;
+}
+.search{
+    position: absolute;
+    right: 13px;
+    top: 39px;
+    padding: 5px 84px;
+}
+#box{
+    height: 15px;
+    width: 16px;
+    right: -3px;
+    top: 3px;
+}
+label{
+    font-size: 22px;
+}
+#top{
+    margin: 4px;
+    position: relative;
+    bottom: 102px;
+    font-size: 20px;
+    right: -2px;
+}
+.in placeholder{
+    font-size: 18px;
+}
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a class="active" href="register.html">REGISTER</a></li>
+                <li><a href="http://kavitakosh.org/" target="_blank">MORE</a></li>
+                <li><a href="contactus.html">CONTACT US</a> </li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search This Website">
+                    <a href="https://google.com" target="_blank"><img id="box"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAAD6+vpvb2/W1tZeXl5paWn29vbNzc2mpqaUlJTn5+d3d3fj4+PS0tLr6+u6urpYWFiurq6fn58LCwtERER+fn4tLS1KSkocHBxQUFCIiIg5OTm0tLTAwMAVFRUkJCQ1HU9OAAAEaElEQVR4nO1a6bqiMAyFsooCKqu4vv9TjjatUK8LaeJw5xvOT7UkticnC3WcGTNm/HMQaZbFcebnf990fiq8xh2g3R8z8ZeMiyw5lO4T7IJ1+n3z6b56Zrz3Ifqq+cx7Yx3QJN9z4dQ+Wjt0waa9PH66/44L/mZgo1oV8VJ/IyL/uA92g68LfheipH98t/B/GhB5XB96B2Nm+/792bvEf+3lKbi7kLDaL+4UO3745bK+84MvJkWon/nJ/A25dqFcM9mPdOSPDTBfL1iw2M+V5h6y0UuEZmzBYV+FeY2S+njHRcWlso89z6hTokS0LyD8zhZh7bHwAOL6YiUre/CAJEmKTK+l5y0gHsvl51++wppkX59CZV2pKAKebNc7TkcjYkiOJKUh4xXEwEku3hDsX/UAMojVWnGWAUgseRP7WISlY9LPO4jK9m+ABHdE+9cy0pZICS0Ce0gtu6C3APjr0e07aWm1BVspYgwboASxwaqRTEIhh33Ht5EznyIgj5AsCHBrJAU7pnYTFA23puEpZwCiRCtKLn0m5FETkoY1ZsXWXsGfQab1BtOurTjKuR6R3FBEoxK1NnXoGzRIEuQlKwUUCRA7mkoZ5LMPnELImiTNgdEBqQTteBYW6LD5gPRW3BzGZ8SaU4ZukLm1HB8GAUNLYwAarPG5NSBW4z8xuQPV7ICFA9SC3ACSA7Kp5BivaEQNzoGENxmqNvcyPrls6U2hCdkiVuOVUHYzO0YH1siydCkLCMaBszzT1fjfR5K0jPPmDsvqkDkM0H1mYtFKvAG0OZj+FFawvQaz+D8ua1Xa4k9U1uUczfkNKbYqd/SEkOmV6N6mxrWbKjwFzDqwMSW9RpSRb7CQG4DtMvySqy6MLGcdsibYMUSi3ACLWQdIAT0nC9dW1GDUTW4Qa7QMa0D0BsRDgGGxnaKA7zQeAgMtBUXAmy9SVoZztM2rMN3aEcQA5r2t9Xo4BPtXLiDohHmremlrOzCFQbm7tbavi0NLEkMAEKVEPWRjcQprddWGZF+1CKia3lx43T5idQ1S7jY4JonBjQ+PqGX6r2CCOe3cAajVrXp/6laji6rCNUHt8mJ9UygZxYS4cx9BPYVU38loio9P8sMf5q9YET0Q97sxbvI2Qff3eJrA8ID89ifuLym16+c+iGxA/fp+g4GJB06U9Hf4Ll0Sp8PwFnl6XPUuut0thUamB1QeXJlgbGrZBqt9cVwft0ntbQ7Dr85bsCVMOlB5cEX2lGAP2C16QxvjG45OK0+aF3YVQnO6x8yDG6J4dXhh/LwpHukpVuYe8DTcUVYEzdl4cnmp6tMzpeTngUYaHxd7zwtDr06OpycXDDVMPeDquDEwecA3dxmN7/AA5YG5B4w8GA1TDxADQzbMPPgNPDD14P/kQW14wHNDBueBycSZB7/hFKb3YAoemBUK5y0FOw8mOAXH1IPJMxPnK+LR8Ca2P+AB50URFNQpsN4RQAEy02T//4ZwsvPXCCa2P2PGjN+HP7msKLEq/B0IAAAAAElFTkSuQmCC"
+                            alt=""></a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <form name="myform" class="form" method="GET" onsubmit="return greet()">
+        <div id="top">
+            Register With Us Now
+
+        </div>
+        <label for="name">Name :</label>
+        <br>
+        <input class="in" type="text" name="name" id="name" placeholder="Enter Your Name">
+        <br><br>
+        <label for="pass">Password :</label>
+        <br>
+        <input class="in" type="password" name="pass" id="pass" placeholder="Enter Your Password" required>
+        <br><br>
+        <label for="email">Email :</label>
+        <br>
+        <input class="in" type="email" name="email" id="email" placeholder="Email">
+        <br><br>
+        <label for="mob">Mobile Number :</label>
+        <br>
+        <input class="in" type="tel" name="mob" id="mob" placeholder="Enter mobile number">
+        <br><br><br><br><br>
+        <input id="reset" type="reset" value="Reset All">
+        <br><br>
+        <input id="submit" type="submit" value="Submit">
+        <br>
+
+    </form>
+    <div id="response"></div>
+    <script>
+        function greet() {
+            let name = document.myform.name.value;
+            document.getElementById("response").innerHTML = name+", Thank You For Registering with us.";
+        }
+      </script>
+</body>
+
+</html>

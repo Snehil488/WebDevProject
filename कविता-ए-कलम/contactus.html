@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 10px 14px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            padding: 3px 11px;
+        }
+
+        .navbar li a:hover {
+            color: rgb(110, 110, 228);
+            /* background-color: rgb(43, 43, 165); */
+            /* text-decoration: underline; */
+            /* border-radius: 30px; */
+
+        }
+
+        .navbar ul {
+            overflow: auto;
+            border: 2px solid red;
+            border-radius: 18px;
+        }
+
+        .navbar {
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        .search {
+            float: right;
+            padding: 8px 50px;
+        }
+
+        .search input {
+            border-radius: 9px;
+            width: 160px;
+            height: 20px;
+
+        }
+
+        #box {
+            width: 24px;
+            height: 22px;
+            position: relative;
+            top: 6px;
+        }
+
+        #whats {
+            height: 80px;
+            width: 80px;
+        }
+
+        #face {
+            height: 80px;
+            width: 80px;
+        }
+
+        #lecturer {
+            height: 80px;
+            width: 80px;
+        }
+
+        body {
+            background: url(https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            margin: auto;
+            display: inline-block;
+            position: relative;
+            left: 334px;
+            top: 99px;
+        }
+
+        strong {
+            position: relative;
+
+            top: -36px;
+            left: 22px;
+            font-size: x-large;
+        }
+
+        strong:hover {
+            /* background-color: rgb(0, 102, 255); */
+            border-radius: 40px;
+            padding: 10px 10px;
+            color: brown;
+            /* border: 3px solid white; */
+            cursor: pointer;
+        }
+
+        #whats:hover {
+            height: 82px;
+            width: 82px;
+            cursor: pointer;
+        }
+
+        #face:hover {
+            height: 82px;
+            width: 82px;
+            cursor: pointer;
+
+        }
+
+        #lecturer:hover {
+            height: 82px;
+            width: 82px;
+            cursor: pointer;
+
+        }
+
+        #design {
+            /* float: bottom; */
+            display: inline;
+            position: relative;
+            bottom: -241px;
+
+            right: -161px;
+            /* border: 3px solid; */
+            padding-top: 68px;
+            padding-left: 10px;
+            padding-right: 12px;
+            /* background-color: lightpink; */
+            border-radius: 10px;
+        }
+
+        #des {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius: 90px;
+        }
+
+        #design:hover {
+
+            cursor: pointer;
+
+        }
+
+        b {
+            position: relative;
+            bottom: 19px;
+            right: -7px;
+            color: rgb(17, 16, 16);
+            font-family: 'Great Vibes', cursive;
+            /* font-family: 'Pacifico', cursive; */
+            /* background-color: rgb(208, 128, 240); */
+            font-size: large;
+        }
+
+        .navbar li a.active {
+            color: blueviolet;
+        }
+
+        b:hover {
+            color: red;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                color: white;
+                width: 360px;
+                height: 640px;
+                background: url(https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            /* background-size: 100%; */
+            }
+.navbar li a{
+    width: 150px;
+}
+            .box {
+                position: absolute;
+                top: 274px;
+                left: 30px;
+                text-align: center;
+            }
+
+            /* #design {
+                position: absolute;
+                top: 760px;
+                left: 173px;
+
+            } */
+         
+
+            b {
+                color: rgb(18, 19, 18);
+            }
+
+           
+
+            .box {
+                display: block;
+                text-align: -webkit-center;
+                right: -13px;
+
+            }
+
+            #teach {
+                position: relative;
+                left: 127px;
+                top: -57px;
+                text-decoration: none;
+            }
+
+            .navbar ul {
+                padding: 2px 3px;
+                /* width: 100px; */
+                background-color: black;
+            }
+
+            .navbar {
+                /* padding: 2px 3px; */
+                width: 486px;
+                /* background-color: black; */
+            }
+
+            .search {
+                position: relative;
+                left: -39px;
+
+            }
+         
+            strong:hover{
+                color: brown;
+                text-decoration: none;
+                /* background-color: none; */
+                border: none;
+            }
+            .navbar{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 350px;
+    font-size: 15px;
+    height: 69px;
+    
+}
+.navbar li a{
+padding: 0 12px;
+margin: 0;
+}
+.navbar li{
+margin: 0;
+padding: 0;
+}
+.navbar ul{
+    padding: 0;
+    border: none;
+}
+.search input{
+    width: 150px;
+    height: 12px;
+    font-size: 10px;
+}
+.search{
+    position: absolute;
+    left: 21px;
+    top: 39px;
+}
+#box{
+    height: 15px;
+    width: 16px;
+    right: -2px;
+    top: 3px;
+}
+/* #whats{
+height: 50px;
+width: 50px;
+position: relative;
+left: -119px;
+    top: -113px;
+
+}
+#face{
+    height: 50px;
+width: 50px;
+position: relative;
+bottom: 90px;
+    right: 54px;
+
+}
+#lecturer{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    bottom: 45px;
+    right: 60px;
+} */
+strong{
+    position: relative;
+    top: -135px;
+    left: -1px;
+    font-size: medium;
+}
+#cyp{
+    position: relative;
+    top: -107px;
+    left: -14px;
+}
+#teach{
+    position: relative;
+    top: -80px;
+    left: -23px;
+}
+b{
+    font-size: 20px;
+}
+#des{
+    height: 60px;
+    width: 60px;
+
+}
+#design{
+    top: 777px;
+    left: 64px;
+}
+#num{
+    position: relative;
+    left: -79px;
+}
+.ph{
+    position: relative;
+}
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+                <li><a href="http://kavitakosh.org/" target="_blank">MORE</a></li>
+                <li><a class="active" href="contactus.html">CONTACT US</a> </li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search This Website">
+                    <a href="https://google.com" target="_blank"><img id="box"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAAD6+vpvb2/W1tZeXl5paWn29vbNzc2mpqaUlJTn5+d3d3fj4+PS0tLr6+u6urpYWFiurq6fn58LCwtERER+fn4tLS1KSkocHBxQUFCIiIg5OTm0tLTAwMAVFRUkJCQ1HU9OAAAEaElEQVR4nO1a6bqiMAyFsooCKqu4vv9TjjatUK8LaeJw5xvOT7UkticnC3WcGTNm/HMQaZbFcebnf990fiq8xh2g3R8z8ZeMiyw5lO4T7IJ1+n3z6b56Zrz3Ifqq+cx7Yx3QJN9z4dQ+Wjt0waa9PH66/44L/mZgo1oV8VJ/IyL/uA92g68LfheipH98t/B/GhB5XB96B2Nm+/792bvEf+3lKbi7kLDaL+4UO3745bK+84MvJkWon/nJ/A25dqFcM9mPdOSPDTBfL1iw2M+V5h6y0UuEZmzBYV+FeY2S+njHRcWlso89z6hTokS0LyD8zhZh7bHwAOL6YiUre/CAJEmKTK+l5y0gHsvl51++wppkX59CZV2pKAKebNc7TkcjYkiOJKUh4xXEwEku3hDsX/UAMojVWnGWAUgseRP7WISlY9LPO4jK9m+ABHdE+9cy0pZICS0Ce0gtu6C3APjr0e07aWm1BVspYgwboASxwaqRTEIhh33Ht5EznyIgj5AsCHBrJAU7pnYTFA23puEpZwCiRCtKLn0m5FETkoY1ZsXWXsGfQab1BtOurTjKuR6R3FBEoxK1NnXoGzRIEuQlKwUUCRA7mkoZ5LMPnELImiTNgdEBqQTteBYW6LD5gPRW3BzGZ8SaU4ZukLm1HB8GAUNLYwAarPG5NSBW4z8xuQPV7ICFA9SC3ACSA7Kp5BivaEQNzoGENxmqNvcyPrls6U2hCdkiVuOVUHYzO0YH1siydCkLCMaBszzT1fjfR5K0jPPmDsvqkDkM0H1mYtFKvAG0OZj+FFawvQaz+D8ua1Xa4k9U1uUczfkNKbYqd/SEkOmV6N6mxrWbKjwFzDqwMSW9RpSRb7CQG4DtMvySqy6MLGcdsibYMUSi3ACLWQdIAT0nC9dW1GDUTW4Qa7QMa0D0BsRDgGGxnaKA7zQeAgMtBUXAmy9SVoZztM2rMN3aEcQA5r2t9Xo4BPtXLiDohHmremlrOzCFQbm7tbavi0NLEkMAEKVEPWRjcQprddWGZF+1CKia3lx43T5idQ1S7jY4JonBjQ+PqGX6r2CCOe3cAajVrXp/6laji6rCNUHt8mJ9UygZxYS4cx9BPYVU38loio9P8sMf5q9YET0Q97sxbvI2Qff3eJrA8ID89ifuLym16+c+iGxA/fp+g4GJB06U9Hf4Ll0Sp8PwFnl6XPUuut0thUamB1QeXJlgbGrZBqt9cVwft0ntbQ7Dr85bsCVMOlB5cEX2lGAP2C16QxvjG45OK0+aF3YVQnO6x8yDG6J4dXhh/LwpHukpVuYe8DTcUVYEzdl4cnmp6tMzpeTngUYaHxd7zwtDr06OpycXDDVMPeDquDEwecA3dxmN7/AA5YG5B4w8GA1TDxADQzbMPPgNPDD14P/kQW14wHNDBueBycSZB7/hFKb3YAoemBUK5y0FOw8mOAXH1IPJMxPnK+LR8Ca2P+AB50URFNQpsN4RQAEy02T//4ZwsvPXCCa2P2PGjN+HP7msKLEq/B0IAAAAAElFTkSuQmCC"
+                            alt=""></a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="box">
+        <img id="whats" class="ph" src="http://pngimg.com/uploads/whatsapp/whatsapp_PNG21.png" alt="">
+        <strong id="num">98937-01054</strong>
+        <br><br><br>
+        <img id="face" class="ph" src="http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19757.png" alt="">
+        <strong id="cyp">Komal Singh Verma 'सिफ़र'</strong>
+        <br><br><br>
+        <img id="lecturer"
+            src="data:image/jpeg;base64,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"
+            alt="">
+        <strong id="teach" class="ph">Chemistry Lecturer - HSS Dargaon Durg, C.G.</strong>
+    </div>
+
+    <div id="design">
+        <img id="des" src="picc.png" alt="">
+        <b>Designed by - Snehil Verma</b>
+    </div>
+</body>
+
+</html>
