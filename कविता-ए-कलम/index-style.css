@@ -1,0 +1,510 @@
+
+body {
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header ::before {
+    background: url('https://images.wallpaperscraft.com/image/footprint_sand_beach_179084_3840x2160.jpg');
+    content: "";
+    height: 130%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.25;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    border-radius: 15px;
+}
+
+/* 
+        background-image: {
+            opacity: 0.3;
+        } */
+
+.navbar li {
+    float: left;
+    list-style: none;
+    margin: 10px 14px;
+    /* position: sticky; */
+}
+
+    .navbar li a {
+        text-decoration: none;
+        color: white;
+        padding: 3px 11px;
+    }
+
+        .navbar li a:hover {
+            color: rgb(110, 110, 228);
+            /* background-color: rgb(43, 43, 165); */
+            /* text-decoration: underline; */
+            /* border-radius: 30px; */
+        }
+
+        .navbar li a.active {
+            color: blueviolet;
+        }
+
+.navbar ul {
+    overflow: auto;
+    border: 2px solid red;
+    border-radius: 18px;
+}
+
+.navbar {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.search {
+    float: right;
+    padding: 8px 50px;
+}
+
+    .search input {
+        border-radius: 9px;
+        width: 160px;
+        height: 20px;
+    }
+
+#clickable img {
+    position: relative;
+    top: 20px;
+    left: 424px;
+    opacity: 0.68;
+}
+
+#poem {
+    height: 140px;
+    position: relative;
+    left: 455px;
+    top: 14px;
+    /* opacity: 0.75; */
+    border: 1px solid black;
+    border-radius: 24px;
+    max-width: 100%;
+    box-shadow: 0px 0px 7px 2px rgba(139, 69, 19, 0.678);
+}
+
+.para {
+    position: relative;
+    right: 174px;
+}
+
+/* #imag{
+   
+    height: 104px;
+    width: 121px;
+    opacity: 0.6;
+    position: absolute;
+    right: 110px;
+    /* border: 2px solid black; */
+/* border-radius: 30px;
+    } */
+
+#imag:hover {
+    opacity: 1;
+    /* border-radius: 30px; */
+    /* border: 5px solid black; */
+}
+
+*/ #button {
+    /* background-color: rgb(73, 66, 66); */
+    height: 44px;
+    width: 139px;
+    color: blanchedalmond;
+    text-emphasis: bold;
+    text-decoration: tan;
+    position: relative;
+    left: 215px;
+    /* text-shadow: beige; */
+}
+
+#sum {
+    display: inline;
+    position: relative;
+    color: blueviolet;
+    left: 240px;
+    font-size: large;
+    font-family: 'Baloo 2', cursive;
+    border: 3px solid slateblue;
+    padding: 4px 6px;
+    border-radius: 30px;
+}
+
+#box {
+    width: 24px;
+    height: 22px;
+    position: relative;
+    top: 6px;
+}
+
+#sum:hover {
+    /* text-decoration: underline; */
+    color: rgb(50, 11, 156);
+    /* text-emphasis: bold; */
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* .button {
+            background-color: rgb(98, 193, 236);
+            position: relative;
+            left: 244px;
+            color: white;
+            height: 47px;
+            width: 120px;
+            font-size: large;
+            border-radius: 30px;
+            border: 2px solid;
+        }
+
+        .button a {
+            text-decoration: none;
+        }
+
+        .button a:hover {
+            color: brown;
+            font-weight: bold;
+            
+
+        }
+
+        .button:hover {
+            color: brown;
+            background-color: lightskyblue;
+            
+        } */
+fieldset {
+    display: inline-block;
+    border-width: 14px;
+    border: 4px solid yellow;
+    position: relative;
+    border-radius: 18px;
+    left: 327px;
+    top: 34px;
+    width: 508px;
+    height: 220px;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes anime {
+    from {
+        width: 600px;
+        height: 220px;
+        border: 4px solid darkgoldenrod;
+    }
+
+    to {
+        width: 508px;
+        height: 220px;
+    }
+}
+
+legend {
+    font-weight: bold;
+    background-color: chocolate;
+    border-radius: 40px;
+    padding: 5px 10px;
+    /* text-shadow:2px 2px white; */
+}
+
+#one {
+    position: relative;
+    height: 155px;
+    width: 155px;
+    top: 18px;
+    left: 21px;
+    max-width: 100%;
+}
+
+#two {
+    position: relative;
+    height: 149px;
+    width: 149px;
+    top: -203px;
+    left: 327px;
+    max-width: 100%;
+}
+
+#one:hover {
+    border: 2px solid black;
+    border-radius: 90px;
+}
+
+#two:hover {
+    border: 2px solid black;
+    border-radius: 90px;
+}
+
+legend:hover {
+    border: 2px solid ivory;
+}
+
+.boxx {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    flex-wrap: wrap;
+    /* width: 80px; */
+    margin: auto;
+    /* color: yellow; */
+    position: relative;
+    /* bottom:  50px; */
+    justify-content: flex-end;
+}
+
+#butone a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#buttwo a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+    #buttwo a:hover {
+        color: brown;
+        font-weight: bold;
+    }
+
+#butone a:hover {
+    color: brown;
+    font-weight: bold;
+}
+
+#butone {
+    /* background-color: rgb(49, 109, 219); */
+    /* border: 2px solid black; */
+    background-color: white;
+    /* border-radius: 10px; */
+    height: 40px;
+    width: 100px;
+    border: none;
+    margin: 4px;
+}
+
+    #butone:hover {
+        box-shadow: 3px 3px 10px blue;
+    }
+
+#buttwo:hover {
+    box-shadow: 3px 3px 10px blue;
+}
+
+#buttwo {
+    /* background-color: rgb(49, 109, 219); */
+    background-color: white;
+    border: none;
+    margin: 4px;
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
+    /* position: relative;
+    top: 4px; */
+    height: 40px;
+    width: 100px;
+}
+
+#butthree a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#butthree {
+    /* background-color: rgb(49, 109, 219); */
+    /* border: 2px solid black; */
+    background-color: white;
+    /* border-radius: 10px; */
+    height: 40px;
+    width: 100px;
+    border: none;
+    margin: 4px;
+}
+
+    #butthree a:hover {
+        color: brown;
+        font-weight: bold;
+    }
+
+    #butthree:hover {
+        box-shadow: 3px 3px 10px blue;
+    }
+
+@media (max-width: 500px) {
+    body {
+        height: 640px;
+        width: 360px;
+    }
+
+    fieldset {
+        position: absolute;
+        left: 7px;
+        top: 200px;
+        display: contents;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        width: 350px;
+        font-size: 15px;
+        height: 69px;
+    }
+
+        .navbar li a {
+            padding: 0 12px;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul {
+            padding: 0;
+            border: none;
+        }
+
+    .search input {
+        width: 150px;
+        height: 12px;
+    }
+
+    .search {
+        position: absolute;
+        right: 31px;
+        top: 39px;
+    }
+
+    #box {
+        height: 15px;
+        width: 16px;
+        right: 10px;
+        top: 3px;
+    }
+
+
+
+
+    #poem {
+        /* position: absolute; */
+        position: absolute;
+        height: 107px;
+        width: 195px;
+        top: 179px;
+        left: 38px;
+        opacity: 0.85;
+    }
+
+    #two {
+        position: absolute;
+        top: 327px;
+        left: 38px;
+        height: 100px;
+        width: 100px;
+        opacity: 0.8;
+    }
+
+    #one {
+        position: relative;
+        top: 349px;
+        left: 31px;
+        height: 100px;
+        width: 100px;
+        opacity: 0.8;
+    }
+
+    input {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .boxx {
+        position: relative;
+        top: 407px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #butone {
+        height: 30px;
+        width: 72px;
+    }
+
+    #buttwo {
+        height: 30px;
+        width: 72px;
+    }
+
+    #butthree {
+        height: 30px;
+        width: 89px;
+    }
+
+    legend {
+        position: relative;
+        top: 43px;
+        width: 190px;
+        left: 33px;
+    }
+
+
+
+
+
+
+    header ::before {
+        background: url('https://cdn.pixabay.com/photo/2013/12/29/00/51/flower-234952__480.jpg');
+        content: "";
+        height: 120%;
+        width: 105%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.1;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    ul {
+        width: 200px;
+    }
+
+    .navbar ul {
+        width: 297px;
+    }
+
+    .search input {
+        position: relative;
+        left: -14px;
+        font-size: 10px;
+    }
+
+    .navbar ul {
+        width: auto;
+    }
+}

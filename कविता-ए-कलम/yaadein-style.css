@@ -1,0 +1,182 @@
+details[open] summary ~ * {
+    animation: open 1s ease-in-out;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+        margin-left: -20px
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px
+    }
+}
+
+body {
+    background: url(https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.heading:hover {
+    color: blue;
+    border: 4px solid rgb(76, 24, 110);
+    padding: 3px 3px;
+    border-radius: 10px;
+}
+
+p {
+    font-family: 'Eczar', serif;
+}
+
+    p:hover {
+        text-decoration: underline;
+    }
+
+
+/* 
+        background-image: {
+            opacity: 0.3;
+        } */
+
+.navbar li {
+    float: left;
+    list-style: none;
+    margin: 10px 14px;
+    /* position: sticky; */
+}
+
+    .navbar li a {
+        text-decoration: none;
+        color: white;
+        padding: 3px 11px;
+    }
+
+        .navbar li a:hover {
+            color: rgb(110, 110, 228);
+            /* background-color: rgb(43, 43, 165); */
+            /* text-decoration: underline; */
+            /* border-radius: 30px; */
+        }
+
+        .navbar li a.active {
+            color: blueviolet;
+        }
+
+.navbar ul {
+    overflow: auto;
+    border: 2px solid red;
+    border-radius: 18px;
+}
+
+.navbar {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.search {
+    float: right;
+    padding: 8px 50px;
+}
+
+    .search input {
+        border-radius: 9px;
+        width: 160px;
+        height: 20px;
+    }
+
+#box {
+    width: 24px;
+    height: 22px;
+    position: relative;
+    top: 6px;
+}
+
+.poems {
+    text-align: center;
+}
+
+.heading {
+    font-family: 'Arya', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    width: 199px;
+    margin: 34px auto;
+}
+
+#title {
+    width: 447px;
+    margin: auto;
+    font-family: 'Kalam', cursive;
+    font-size: 33px;
+    margin: 53px auto;
+    color: rgb(87, 39, 5);
+    text-align: end;
+}
+
+
+
+
+
+@media (max-width: 500px) {
+    .navbar {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        width: 360px;
+        font-size: 15px;
+        height: 69px;
+    }
+
+        .navbar li a {
+            padding: 0 12px;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul {
+            padding: 0;
+            border: none;
+        }
+
+    .search input {
+        width: 150px;
+        height: 12px;
+        font-size: 10px;
+    }
+
+    .search {
+        position: absolute;
+        left: 60px;
+        top: 39px;
+    }
+
+    #box {
+        height: 15px;
+        width: 16px;
+        right: -3px;
+        top: 3px;
+    }
+
+    .poems {
+        font-size: 15px;
+    }
+
+    .heading {
+        font-size: 18px;
+    }
+
+    #title {
+        font-size: 20px;
+        text-align: center;
+        width: 259px;
+    }
+}
+
